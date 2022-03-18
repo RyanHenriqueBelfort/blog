@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="bg-primary text-white text-center mb-4 p-4 ">
+      <%= link_to root_path, class: 'text-white' do%>
+        <h1 class='display-4'>Blog do Ryan Henrique</h1>
+      <% end %>
+      <p class='lead'>
+        Blog aqui voce ira encontrar artigos sobre Programação em geral, tecnologia e carreira. 
+      </p>
+    </div>
+    <div class='container'>
+      <%= yield %>
+    </div>
+
+    <footer class='bg-primary text-center text-white mt-5 p-4'>
+      Copyright Lucas Caton <%= Date.current.year %>
+    </footer>
+
+  </body>
+</html>
